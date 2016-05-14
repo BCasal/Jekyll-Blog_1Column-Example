@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Posts</h1>
+  <section class="section-index">
+    <!-- posts-list -->
+    <ul class="post-list">
+      {% for post in paginator.posts %}
+        <li class="item">
+          <!-- post-title -->
+          <h2>
+            <a class="post-link" title="{{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">
+            {% if post.icon != nill %}
+            <i class="fa fa-{{ post.icon }}"></i>{% endif %} {{ post.title }}</a>
+          </h2>
+          <!-- post-date -->
+          <span class="post-meta"><i class="fa fa-calendar"></i> {{ post.date | date: "%b %-d, %Y" }}</span>
+          <!-- post-author -->
+          <span class="post-meta"><i class="fa fa-pencil ml"></i> {{ post.author }}</span>
+          <br>
+          <!-- post-cats -->
+          <span class="post-meta"><i class="fa fa-folder"></i> </span>
+            {% for cat in post.categories %}
+              <a href="{{site.baseurl}}/categories/#{{ cat }}" title="{{ cat }}" rel="tag">{{ cat | join: "/" }}</a><span class="post-meta">{% unless post.categories.last == cat %},{% endunless %}</span>
+            {% endfor %}
+          <!-- post-tags -->
+          <span class="post-meta"><i class="fa fa-tags ml"></i> </span>
+            {% for tag in post.tags %}
+              <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}" rel="tag">{{ tag }}</a><span class="post-meta">{% unless post.tags.last == tag %},{% endunless %}</span>
+            {% endfor %}
+          <!-- post-excerpt -->
+          {% if post.description != nill %}
+            <span class="excerpt">{{ post.description | markdownify }}</span>
+          {% else %}
+            <span class="excerpt">{{ post.excerpt }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>    
+  </section>
+  <!-- pagination-pages-->
+  {% include pagination.html %}
+</div>

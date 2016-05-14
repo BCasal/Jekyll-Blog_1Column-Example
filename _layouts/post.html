@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <!-- page-header -->
+  <header class="post-header">
+    <!-- page-title -->
+    <h1 class="post-title" itemprop="name headline">
+      {% if page.icon != nill %}
+        <!-- page-icon -->
+        <i class="fa fa-{{ page.icon }}"></i>
+      {% endif %}
+      {{ page.title }}
+    </h1>
+    <!-- tags -->
+    <span>
+      <!-- page-date -->
+      <time  class="post-meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      	<i class="fa fa-calendar"></i>
+      	{{ page.date | date: "%b %-d, %Y" }}
+      </time>
+      <!-- page-author -->
+      {% if page.author %}
+        <span  class="post-meta" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">
+            <i class="fa fa-pencil ml"></i>
+            {{ page.author }}
+          </span>
+        </span>
+      {% endif %}
+    </span>
+    <br>
+    <!-- page-cats -->
+    <span class="post-meta"><i class="fa fa-folder"></i> </span>
+      {% for cat in page.categories %}
+        <a href="{{site.baseurl}}/categories/#{{ cat }}" title="{{ cat }}" rel="tag">{{ cat | join: "/" }}</a><span class="post-meta">{% unless page.categories.last == cat %},{% endunless %}</span>
+	    {% endfor %}
+    <!-- page-tags -->
+    <span class="post-meta"><i class="fa fa-tags ml"></i> </span>
+      {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}" rel="tag">{{ tag }}</a><span class="post-meta">{% unless page.tags.last == tag %},{% endunless %}</span>
+	    {% endfor %}
+  </header>
+  <!-- page-content -->
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,89 @@
+/**
+ * Tags
+ */
+.tags {
+  display: inline-flex;
+  padding: 0.3rem 0.1rem;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.tags-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+/**
+ * Posts excerpt
+ */
+.excerpt > p { margin: 1rem auto 0; }
+
+/**
+ * Pagination pages
+ */
+.pagination {
+  display: flex;
+  a, span { margin: 0 auto;}
+  @include media-query($on-palm) {
+    font-size: 14px;
+  }
+}
+
+/**
+ * Search
+ */
+.search-container {
+  margin: 3rem auto;
+  max-width: 500px;
+  background: rgba(255,255,255, 0.3);
+  p {
+    color: $grey-color-dark;
+    text-shadow: 1px 1px 1px $grey-color-light;
+    text-align: center;
+  }
+}
+
+.search-input {
+  display: inline-block;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.results-container {
+  list-style: none;
+  margin: auto;
+}
+
+.search-item {
+  margin-top: 0.5rem;
+  display: block;
+  color: $grey-color-dark;
+  &:visited {
+    color: $grey-color-light;
+  }
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  font-size: 14px;
+  background: white;
+}
+
+/**
+* Helpr classes
+*/
+.item {
+  border: 1px solid $grey-color-light;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.ml { margin-left:0.5rem; }
