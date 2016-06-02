@@ -7,23 +7,26 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <!-- Mail -->
-          <li><i class="fa fa-mail"></i> Email</li>
-          <li><a href="mailto:{{ site.email }}" title="{{ site.email }}">{{ site.email }}</a></li>
+          <li><i class="fa fa-envelope-o"></i> Email</li>
+          <li><a href="mailto:{{ site.author.email }}" title="{{ site.author.email }}">{{ site.author.email }}</a></li>
+          <!-- RSS -->
+          <li><i class="fa fa-rss"></i> Subscribe</li>
+          <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="RSS"> via RSS</a></li>
         </ul>
       </div>
       <!-- Social-media-list -->
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
           <!-- GitHub-user -->
-          {% if site.github_username %}
+          {% if site.author.github %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-github.html username=site.author.github %}
           </li>
           {% endif %}
           <!-- Twitter-user -->
-          {% if site.twitter_username %}
+          {% if site.author.twitter %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-twitter.html username=site.author.twitter %}
           </li>
           {% endif %}
         </ul>

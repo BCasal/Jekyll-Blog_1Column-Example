@@ -12,13 +12,18 @@ layout: default
           <!-- post-title -->
           <h2>
             <a class="post-link" title="{{ post.title }}" href="{{ post.url | prepend: site.baseurl }}">
-            {% if post.icon != nill %}
-            <i class="fa fa-{{ post.icon }}"></i>{% endif %} {{ post.title }}</a>
+              {% if post.icon != null %}
+                <i class="fa fa-{{ post.icon }}"></i>
+              {% endif %}
+              {{ post.title }}
+            </a>
           </h2>
           <!-- post-date -->
-          <span class="post-meta"><i class="fa fa-calendar"></i> {{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="post-meta"><i class="fa fa-calendar"></i> {{ post.date | date_to_string }}</span>
           <!-- post-author -->
-          <span class="post-meta"><i class="fa fa-pencil ml"></i> {{ post.author }}</span>
+          {% if post.author != null %}
+            <span class="post-meta"><i class="fa fa-user fa-fw"></i> {{ post.author }}</span>
+          {% endif %}
           <br>
           <!-- post-cats -->
           <span class="post-meta"><i class="fa fa-folder"></i> </span>
@@ -26,19 +31,15 @@ layout: default
               <a href="{{site.baseurl}}/categories/#{{ cat }}" title="{{ cat }}" rel="tag">{{ cat | join: "/" }}</a><span class="post-meta">{% unless post.categories.last == cat %},{% endunless %}</span>
             {% endfor %}
           <!-- post-tags -->
-          <span class="post-meta"><i class="fa fa-tags ml"></i> </span>
+          <span class="post-meta"><i class="fa fa-tags fa-fw"></i> </span>
             {% for tag in post.tags %}
               <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}" rel="tag">{{ tag }}</a><span class="post-meta">{% unless post.tags.last == tag %},{% endunless %}</span>
             {% endfor %}
           <!-- post-excerpt -->
-          {% if post.description != nill %}
-            <span class="excerpt">{{ post.description | markdownify }}</span>
-          {% else %}
-            <span class="excerpt">{{ post.excerpt }}</span>
-          {% endif %}
+            <span class="excerpt">{{ post.excerpt | markdownify }}</span>
         </li>
       {% endfor %}
-    </ul>    
+    </ul>
   </section>
   <!-- pagination-pages-->
   {% include pagination.html %}

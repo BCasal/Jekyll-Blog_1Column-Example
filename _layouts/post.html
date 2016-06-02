@@ -6,7 +6,7 @@ layout: default
   <header class="post-header">
     <!-- page-title -->
     <h1 class="post-title" itemprop="name headline">
-      {% if page.icon != nill %}
+      {% if page.icon != null %}
         <!-- page-icon -->
         <i class="fa fa-{{ page.icon }}"></i>
       {% endif %}
@@ -17,13 +17,13 @@ layout: default
       <!-- page-date -->
       <time  class="post-meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       	<i class="fa fa-calendar"></i>
-      	{{ page.date | date: "%b %-d, %Y" }}
+      	{{ page.date | date_to_string }}
       </time>
       <!-- page-author -->
       {% if page.author %}
         <span  class="post-meta" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span itemprop="name">
-            <i class="fa fa-pencil ml"></i>
+            <i class="fa fa-pencil fa-fw"></i>
             {{ page.author }}
           </span>
         </span>
@@ -36,7 +36,7 @@ layout: default
         <a href="{{site.baseurl}}/categories/#{{ cat }}" title="{{ cat }}" rel="tag">{{ cat | join: "/" }}</a><span class="post-meta">{% unless page.categories.last == cat %},{% endunless %}</span>
 	    {% endfor %}
     <!-- page-tags -->
-    <span class="post-meta"><i class="fa fa-tags ml"></i> </span>
+    <span class="post-meta"><i class="fa fa-tags fa-fw"></i> </span>
       {% for tag in page.tags %}
         <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}" rel="tag">{{ tag }}</a><span class="post-meta">{% unless page.tags.last == tag %},{% endunless %}</span>
 	    {% endfor %}

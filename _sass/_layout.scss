@@ -39,10 +39,22 @@
         line-height: $base-line-height;
         color: $background-color;
         text-shadow: 1px 1px 1px $grey-color-dark;
+        padding-bottom: 0.50rem;
+        transition: border-bottom 0.1s;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
+        }
+        &:hover {
+          text-decoration: none;
+          border-bottom: 3px solid $background-color;
+        }
+        @include media-query($on-palm) {
+          &:hover {
+            text-decoration: underline;
+            border-bottom: none;
+          }
         }
     }
 

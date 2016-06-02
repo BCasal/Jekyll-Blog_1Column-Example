@@ -13,15 +13,22 @@
       </a>
       <!-- Nav links - Pages links -->
       <div class="trigger">
-        {% for my_page in site.pages %}
+        {% assign pages_list = site.pages | sort:'order' %}
+        {% for my_page in pages_list %}
           {% if my_page.title %}
-          {% unless my_page.exclude-nav %}
-            <a class="page-link" title="{{ my_page.title }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}
-              {% if my_page.icon != nill %}
-                <i class="fa fa-{{ my_page.icon }} fa-lg"></i>
-              {% endif %}
-            </a>
-          {% endunless %}
+            {% if my_page.url == page.url %}
+              <a class="page-link active" title="{{ my_page.title }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}
+                {% if my_page.icon != null %}
+                  <i class="fa fa-{{ my_page.icon }} fa-lg"></i>
+                {% endif %}
+              </a>
+            {% else %}
+              <a class="page-link" title="{{ my_page.title }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}
+                {% if my_page.icon != null %}
+                  <i class="fa fa-{{ my_page.icon }} fa-lg"></i>
+                {% endif %}
+              </a>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </div>
@@ -30,7 +37,7 @@
   <!-- Serch container -->
   <div class="wrapper">
     <div class="search-container item">
-      <p><i class="fa fa-search fa-2x"></i> Search for title, cat, tag, date, etc...</p>
+      <p><i class="fa fa-search fa-2x"></i> Search title, cat, tag, date, etc...</p>
       <input id="search-input" class="search-input" type="text" placeholder="Search...">
       <ul id="results-container" class="results-container"></ul>
     </div>

@@ -1,15 +1,16 @@
 ---
 layout: page
-title: Tags
+title: "Tags"
 permalink: /tags/
-icon: "tag"
+icon: "tags"
+order: "3"
 ---
 
 {% if site.tags != empty %}
 
   <ul class="tags-list">
     {% for tag in site.tags %}
-      <a class="tags" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="tag">{{ tag[0] }}</a>
+      <a class="tags" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="tag"><i class="fa fa-tag fa-fw"></i> {{ tag[0] }} </a>
     {% endfor %}
   </ul>
 
@@ -18,8 +19,14 @@ icon: "tag"
     <h2  id="{{ tag[0] }}">{{ tag[0] }}</h2>
     {% for post in tag[1] %}
     <li>
-      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%d-%m-%Y" }}</time>
-      <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+      <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+        {% if post.icon != null %}
+          <i class="fa fa-{{ post.icon }}"></i>
+        {% endif %}
+        {{ post.title }}
+      </a>      
+      <i class="fa fa-calendar fa-fw"></i>
+      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
     </li>
     {% endfor %}
   </ul>
