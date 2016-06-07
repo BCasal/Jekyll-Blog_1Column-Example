@@ -15,18 +15,7 @@
     <!-- Footer -->
     {% include footer.html %}
     <!-- Search scripts -->
-    <script src="{{ site.baseurl }}/assets/js/jekyll-search.min.js"></script>
-    <script>
-      SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.baseurl }}/search.json',
-        searchResultTemplate: '<li><a class="search-item" href="{url}" title="{title}">{title}</a></li>',
-        noResultsText: 'No results found',
-        limit: 100,
-        fuzzy: false,
-        exclude: ['Welcome']
-      })
-    </script>
+    {% include scripts/search.html %}
+    {% include scripts/analytics.html %}
   </body>
 </html>
