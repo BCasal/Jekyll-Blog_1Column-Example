@@ -1,4 +1,4 @@
-# Jekyll Blog 1 Column Example Gulp · [Demo](http://bcasal.github.io/Jekyll-Blog_1Column-Example/)
+# Jekyll Blog 1 Column Example (Gulp) · [Demo](http://bcasal.github.io/Jekyll-Blog_1Column-Example/)
 
 Blog creado con [**Jekyll**](https://jekyllrb.com/) a partir de la estructura básica
 que genera por defecto el comando `$ jekyll new .` con algunos complementos,
