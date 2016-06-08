@@ -14,7 +14,7 @@ modificaciones y personalizaciones.
 Listo para utilizar con
 [GitHub-Pages!!!](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
 
-``` bash
+```
 // clone
 $ git clone https://github.com/BCasal/Jekyll-Blog_1Column-Example.git
 
