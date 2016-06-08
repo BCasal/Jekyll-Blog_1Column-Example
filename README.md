@@ -1,9 +1,9 @@
 # Jekyll Blog 1 Column Example Gulp · [Demo](http://bcasal.github.io/Jekyll-Blog_1Column-Example/)
 
-Blog creado con [Jekyll](https://jekyllrb.com/) a partir de la estructura básica
+Blog creado con [**Jekyll**](https://jekyllrb.com/) a partir de la estructura básica
 que genera por defecto el comando `$ jekyll new .` con algunos complementos,
 modificaciones y personalizaciones.
-Jekyll (
+**Jekyll** (
   [Docs](https://jekyllrb.com/docs/home/),
   [GitHub](https://github.com/jekyll/jekyll),
   [WebSite](https://jekyllrb.com/),
@@ -22,12 +22,12 @@ $ git clone https://github.com/BCasal/Jekyll-Blog_1Column-Example.git
 $ mv Jekyll-Blog_1Column-Example New-FolderName
 $ cd New-FolderName
 
-// config
-$ nano _config.yml
-
 // install dep.
 $ sudo gem install jekyll-paginate
 $ npm install
+
+// config
+$ nano _config.yml
 
 // run
 $ gulp
