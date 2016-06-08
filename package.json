@@ -1,0 +1,24 @@
+{
+  "name": "jekyll_blog_1column_example_gulp",
+  "version": "1.0.0",
+  "description": "Jekyll Blog 1 Column Example + Gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BCasal/Jekyll-Blog_1Column-Example.git"
+  },
+  "author": "BCasal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BCasal/Jekyll-Blog_1Column-Example/issues"
+  },
+  "homepage": "https://github.com/BCasal/Jekyll-Blog_1Column-Example#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7"
+  }
+}

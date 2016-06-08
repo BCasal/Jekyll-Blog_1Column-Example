@@ -9,3 +9,6 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+# NodeJS/Gulp
+node_modules
