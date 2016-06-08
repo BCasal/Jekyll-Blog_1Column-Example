@@ -3,7 +3,6 @@
 Blog creado con [Jekyll](https://jekyllrb.com/) a partir de la estructura básica
 que genera por defecto el comando `$ jekyll new .` con algunos complementos,
 modificaciones y personalizaciones.
-
 Jekyll (
   [Docs](https://jekyllrb.com/docs/home/),
   [GitHub](https://github.com/jekyll/jekyll),
@@ -40,19 +39,7 @@ $ gulp
 
 ## Complementos
 
-### Plugin de busqueda **Simple Jekyll Search** by ***Christian Fei***.
-
-Simple Jekyll Search (
-  [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search),
-  [How to use](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/README.md),
-  [License](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/LICENSE.md)
-  )
-
-Christian Fei (
-  [WebSite](http://christian.fei.ninja/),
-  [GitHub](https://github.com/christian-fei),
-  [Twitter](https://twitter.com/christian_fei)
-  )
+### Plugin de busqueda **Simple Jekyll Search** ([Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search), [How to use](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/README.md), [License](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/LICENSE.md)) by ***Christian Fei*** ([WebSite](http://christian.fei.ninja/), [GitHub](https://github.com/christian-fei), [Twitter](https://twitter.com/christian_fei))
 
 ### Plugin de paginación **Jekyll Paginate** para el listado de Posts.
 
