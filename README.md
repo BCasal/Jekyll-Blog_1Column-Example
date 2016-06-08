@@ -39,11 +39,23 @@ $ gulp
 
 ## Complementos
 
-### Plugin de busqueda **Simple Jekyll Search** ([Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search), [How to use](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/README.md), [License](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/LICENSE.md)) by ***Christian Fei*** ([WebSite](http://christian.fei.ninja/), [GitHub](https://github.com/christian-fei), [Twitter](https://twitter.com/christian_fei))
+### Plugin de busqueda **Simple Jekyll Search** by ***Christian Fei***.
+
+Plugin (
+  [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search),
+  [How to use](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/README.md),
+  [License](https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/LICENSE.md)
+  )
+
+Author (
+  [WebSite](http://christian.fei.ninja/),
+  [GitHub](https://github.com/christian-fei),
+  [Twitter](https://twitter.com/christian_fei)
+  )
 
 ### Plugin de paginación **Jekyll Paginate** para el listado de Posts.
 
-Jekyll Paginate (
+Plugin (
   [Jekyll Paginate](https://github.com/jekyll/jekyll-paginate),
   [How to use](https://jekyllrb.com/docs/pagination/),
   [License](https://github.com/jekyll/jekyll-paginate/blob/master/LICENSE.txt)
@@ -51,7 +63,7 @@ Jekyll Paginate (
 
 ### Font Awesome Icon Font
 
-Font Awesome (
+Icon Font (
   [WebSite](http://fontawesome.io/),
   [How to use](https://fortawesome.github.io/Font-Awesome/examples/),
   [GitHub](https://github.com/FortAwesome/Font-Awesome/),
@@ -61,7 +73,7 @@ Font Awesome (
 
 ## Imágenes
 
-Imágenes (
+Backgrounds (
   [Cabecera](https://openclipart.org/detail/221300/abstract-polygon-background),
   [Footer](http://wallpaperswide.com/polygon_green-wallpapers.html)
   )
