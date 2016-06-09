@@ -1,11 +1,11 @@
 
 
-const child					= require('child_process'),
-			browserSync		= require('browser-sync').create(),
-			gulp					= require('gulp'),
-			gutil					= require('gulp-util'),
+const 	child 		= require('child_process'),
+				browserSync = require('browser-sync').create(),
+				gulp 		= require('gulp'),
+				gutil 		= require('gulp-util'),
 
-			siteRoot			= '_site';
+				siteRoot 	= '_site';
 
 // TASK JEKYLL
 
@@ -13,10 +13,10 @@ gulp.task('jekyll', () => {
 
 	const jekyll = child.spawn('jekyll', ['build',
 		'--watch',
-    '--incremental',
-    '--config',
+		'--incremental',
+		'--config',
 		'_config.yml,_config-dev.yml'
-  ]);
+	]);
 
   const jekyllLogger = (buffer) => {
     buffer.toString()
