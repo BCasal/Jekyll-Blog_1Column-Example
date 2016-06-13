@@ -33,6 +33,18 @@ $ nano _config.yml
 $ gulp
 ```
 
+## Tareas Gulp
+
+El comando `$ gulp` ejecuta dos tareas "Jekyll" y "Serve".
+
+* Jekyll, ejecuta las mismas tareas que si se ejecutara el comando `jekyll serve`
+  en un proyecto Jekyll por defecto, excepto, montar el servidor local.
+* Serve, se encarga de montar el servidor local con BrowserSync
+  en la carpeta `_site`
+  
+Hay una tarea llamada "Sass" que procesa los archivos CSS ya compilados,
+añadiendo los prefijos necesarios y minificando el archivo.
+
 > WARNING!!! Algunas veces, la primera vez que arranca browser-sync no muestra
 > correctamente la página, para visualizar la página hay que refrescar el
 > navegador manualmente, et voilà !
