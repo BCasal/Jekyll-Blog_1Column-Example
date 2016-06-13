@@ -1,15 +1,14 @@
 
 
-const   child       = require('child_process'),
-        browserSync = require('browser-sync').create(),
-        gulp        = require('gulp'),
-        gutil       = require('gulp-util'),
+const child        = require('child_process'),
+      browserSync  = require('browser-sync').create(),
+      gulp         = require('gulp'),
+      gutil        = require('gulp-util'),
+      sass         = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
+      rename       = require('gulp-rename'),
 
-        sass 		     = require('gulp-sass'),
-        autoprefixer = require('gulp-autoprefixer'),
-        rename 		   = require('gulp-rename'),
-
-        siteRoot 	   = '_site';
+      siteRoot     = '_site';
 
 // TASK JEKYLL
 
